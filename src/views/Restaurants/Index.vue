@@ -1,23 +1,38 @@
 <template>
   <div class="restaurants">
     <NavBar />
-    <Card :items="articles[0]" />
-    <!-- :tabs="articles[1]" -->
-    <Tabs :tabs="articles[1]" />
+    <div class="px-10 mt-4">
+      <TabsWrapper>
+        <Tab title="Home" class="mt-4"><Card :items="articles[0]" /></Tab>
+        <Tab title="News">
+          <h2>最新動態</h2>
+        </Tab>
+        <Tab title="Top10"><Top /></Tab>
+        <Tab title="Connoisseur" class="mt-4"
+          ><AvatarCard :items="articles[1]"
+        /></Tab>
+      </TabsWrapper>
+    </div>
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue";
 import Card from "@/components/Card.vue";
-import Tabs from "@/components/Tabs.vue";
+import Tab from "@/components/Tab.vue";
+import TabsWrapper from "@/components/TabsWrapper.vue";
+import AvatarCard from "@/components/AvatarCard.vue";
+import Top from "@/views/Restaurants/Top.vue";
 
 export default {
   name: "Restaurants",
   components: {
     NavBar,
+    TabsWrapper,
     Card,
-    Tabs,
+    Tab,
+    AvatarCard,
+    Top,
   },
   data() {
     return {
@@ -49,10 +64,51 @@ export default {
           },
         ],
         [
-          { label: "Home", id: 1, text: "1" },
-          { label: "News", id: 2, text: "2" },
-          { label: "Top10", id: 3, text: "3" },
-          { label: "Connoisseur", id: 4, text: "4" },
+          {
+            name: "UserName",
+            src:
+              "https://i.insider.com/5cb8b133b8342c1b45130629?width=1300&format=jpeg&auto=webp",
+          },
+          {
+            name: "UserName",
+            src:
+              "https://i.insider.com/5cb8b133b8342c1b45130629?width=1300&format=jpeg&auto=webp",
+          },
+          {
+            name: "UserName",
+            src:
+              "https://i.insider.com/5cb8b133b8342c1b45130629?width=1300&format=jpeg&auto=webp",
+          },
+          {
+            name: "UserName",
+            src:
+              "https://i.insider.com/5cb8b133b8342c1b45130629?width=1300&format=jpeg&auto=webp",
+          },
+          {
+            name: "UserName",
+            src:
+              "https://i.insider.com/5cb8b133b8342c1b45130629?width=1300&format=jpeg&auto=webp",
+          },
+          {
+            name: "UserName",
+            src:
+              "https://i.insider.com/5cb8b133b8342c1b45130629?width=1300&format=jpeg&auto=webp",
+          },
+          {
+            name: "UserName",
+            src:
+              "https://i.insider.com/5cb8b133b8342c1b45130629?width=1300&format=jpeg&auto=webp",
+          },
+          {
+            name: "UserName",
+            src:
+              "https://i.insider.com/5cb8b133b8342c1b45130629?width=1300&format=jpeg&auto=webp",
+          },
+          {
+            name: "UserName",
+            src:
+              "https://i.insider.com/5cb8b133b8342c1b45130629?width=1300&format=jpeg&auto=webp",
+          },
         ],
       ],
     };
