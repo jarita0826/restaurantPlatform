@@ -1,11 +1,11 @@
 <template>
   <button
     class="px-4 py-2"
-    :class="item.btnClass"
-    v-for="item in items"
-    :key="item.label"
+    :class="button.btnClass"
+    v-for="button in buttons"
+    :key="button.label"
   >
-    {{ item.label }}
+    {{ button.label }}
   </button>
 </template>
 
@@ -13,7 +13,7 @@
 export default {
   name: "Button",
   props: {
-    items: {
+    buttons: {
       type: Array,
       default: () => [],
     },
