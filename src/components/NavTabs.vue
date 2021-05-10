@@ -1,11 +1,14 @@
 <template>
-  <ul class="mb-4 flex space-x-4 border-b-1.5 border-gray-200 px-4">
+  <ul class="mb-4 flex space-x-4 border-b-1.5 border-gray-200 px-4 pb-0.5">
     <li v-for="item in paths" :key="item.id">
-      <router-link :to="item.path" class="px-4 py-1 -mb-0.5 focus:outline-none">
-        <!-- :class="{
+      <router-link
+        :to="item.path"
+        class="px-4 py-1 -mb-0.5 focus:outline-none"
+        :class="{
           'border-b-1.5 border-red-200 text-red-700 font-bold':
             this.local === item.path,
-        }" -->
+        }"
+      >
         {{ item.label }}
       </router-link>
     </li>
@@ -43,8 +46,8 @@ export default {
     };
   },
 
-  // created: function () {
-  //   this.local = location.pathname;
-  // },
+  created: function () {
+    this.local = location.pathname;
+  },
 };
 </script>
