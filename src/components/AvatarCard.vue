@@ -16,7 +16,7 @@
         followers:4
       </span>
       <br />
-      <Button :items="button" />
+      <Button :buttons="button" />
     </article>
   </article>
 </template>
@@ -25,7 +25,7 @@
 import Button from "@/components/Button.vue";
 
 export default {
-  name: "Card",
+  name: "AvatarCard",
   components: {
     Button,
   },
