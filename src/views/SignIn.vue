@@ -61,7 +61,6 @@
 <script>
 export default {
   name: "sign-in",
-
   data() {
     return {
       email: "",

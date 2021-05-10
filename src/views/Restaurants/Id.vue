@@ -1,13 +1,10 @@
 <template>
   <div class="id text-left">
-    <NavBar />
     {{ $route.params.id }}
     <!-- info -->
     <div class="mx-10 py-4 border-b-2 space-y-3">
       <h2 class="text-3xl font-extrabold">Restaurant Name</h2>
-      <span>
-        catagory
-      </span>
+      <span> catagory </span>
 
       <div class="flex space-x-4">
         <img
@@ -82,13 +79,11 @@
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
 import Button from "@/components/Button.vue";
 
 export default {
   name: "Id",
   components: {
-    NavBar,
     Button,
   },
   data() {

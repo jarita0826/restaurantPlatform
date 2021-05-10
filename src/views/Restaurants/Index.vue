@@ -1,8 +1,9 @@
 <template>
   <div class="restaurants">
-    <NavBar />
     <div class="px-10 mt-4">
-      <TabsWrapper>
+
+      <NavTabs />
+      <!-- <TabsWrapper>
         <Tab title="Home" class="mt-4"
           ><Card
             :items="articles[0].cards"
@@ -43,32 +44,35 @@
         <Tab title="Connoisseur" class="mt-4"
           ><AvatarCard :items="articles[1].cards"
         /></Tab>
-      </TabsWrapper>
+      </TabsWrapper> -->
     </div>
   </div>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
-import Card from "@/components/Card.vue";
-import Tab from "@/components/Tab.vue";
-import TabsWrapper from "@/components/TabsWrapper.vue";
-import AvatarCard from "@/components/AvatarCard.vue";
-import News from "@/components/News.vue";
+
+import NavTabs from "@/components/NavTabs.vue";
+
+// import NavBar from "@/components/NavBar.vue";
+// import Card from "@/components/Card.vue";
+// import Tab from "@/components/Tab.vue";
+// import TabsWrapper from "@/components/TabsWrapper.vue";
+// import AvatarCard from "@/components/AvatarCard.vue";
+// import News from "@/components/News.vue";
 
 // import Top from "@/views/Restaurants/Top.vue";
 
 export default {
   name: "Restaurants",
   components: {
-    NavBar,
-    TabsWrapper,
-    Card,
-    Tab,
-    AvatarCard,
-    News,
+    NavTabs,
+    // NavBar,
+    // TabsWrapper,
+    // Card,
+    // Tab,
+    // AvatarCard,
+    // News,
     // Top,
-  },
   data() {
     return {
       articles: [

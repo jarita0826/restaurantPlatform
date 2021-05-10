@@ -1,5 +1,5 @@
 <template>
-  <div id="sign-in">
+  <div id="sign-up">
     <div class="py-5">
       <form class="w-100" @submit.prevent.stop="handleSubmit">
         <div class="text-center mb-4">
@@ -34,7 +34,6 @@
 
 <script>
 import InputText from "../components/InputText.vue";
-
 export default {
   name: "sign-up",
   components: {
