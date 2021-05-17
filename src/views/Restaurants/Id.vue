@@ -14,7 +14,7 @@
         <div class="flex flex-col justify-between">
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div class="space-x-4">
-            <Button :items="article[0]" />
+            <Button :buttons="article[0]" />
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@
             <p>-3 months ago</p>
           </div>
           <div class="flex items-center">
-            <Button :items="article[1]" />
+            <Button :buttons="article[1]" />
           </div>
         </div>
         <div class="flex justify-between py-4">
@@ -58,7 +58,7 @@
             <p>-3 months ago</p>
           </div>
           <div class="flex items-center">
-            <Button :items="article[1]" />
+            <Button :buttons="article[1]" />
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@
           cols="50"
           class="border-2 block w-full"
         ></textarea>
-        <Button :items="article[2]" />
+        <Button :buttons="article[2]" />
       </form>
     </div>
   </div>

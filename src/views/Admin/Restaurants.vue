@@ -1,17 +1,23 @@
 <template>
   <div class="restaurants">
-    <NavBar />
     <div class="text-left">
       <h3>Backend</h3>
-      <div class="flex">
-        <router-link to="/admin/Restaurants">
+      <div class="flex space-x-2">
+        <router-link
+          to="/admin/Restaurants"
+          class="text-blue-600 hover:text-blue-900"
+        >
           Restaurants
         </router-link>
-        |
-        <router-link to="/admin/categories">
+        <p>|</p>
+        <router-link
+          to="/admin/categories"
+          class="text-blue-600 hover:text-blue-900"
+        >
           Categories
         </router-link>
       </div>
+      <Button :buttons="articles[0].buttons" />
       <router-link to="/admin/Create">
         New Restaurant
       </router-link>
@@ -33,7 +39,7 @@
             <td>Category_1</td>
             <td>Restaurant_1</td>
             <td class="space-x-2">
-              <Button :buttons="articles[0].buttons" />
+              <Button :buttons="articles[1].buttons" />
             </td>
           </tr>
         </tbody>
@@ -43,20 +49,32 @@
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
 import Button from "@/components/Button.vue";
-
-// import Top from "@/views/Restaurants/Top.vue";
 
 export default {
   name: "Restaurants",
   components: {
-    NavBar,
     Button,
   },
   data() {
     return {
       articles: [
+        {
+          buttons: [
+            {
+              btnClass: "text-white bg-blue-800 rounded",
+              label: "Show",
+            },
+            {
+              btnClass: "text-white bg-blue-800 rounded",
+              label: "Edit",
+            },
+            {
+              btnClass: "text-white bg-blue-800 rounded",
+              label: "Delete",
+            },
+          ],
+        },
         {
           cards: [
             {
