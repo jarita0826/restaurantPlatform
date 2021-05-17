@@ -571,12 +571,6 @@ export default {
   components: {
     NavTabs,
     Card,
-    // NavBar,
-    // TabsWrapper,
-    // Tab,
-    // AvatarCard,
-    // News,
-    // Top,
   },
   data() {
     return {
